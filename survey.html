@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Survey</title>
+		<link rel="stylesheet" href="stylesheet.css">
+
+		<script type="text/javascript">
+
+			const images = [
+				'https://arngrenn.files.wordpress.com/2018/11/cropped-hde-brum-mstor2.jpg',
+				'https://webshots.websitesfromhell.net/80b60ba39c7377812aabbeb905a5da2e/s_848.jpg',
+				'https://tr3.cbsistatic.com/hub/i/r/2011/11/21/8432d13c-c3a7-11e2-bc00-02911874f8c8/resize/500x/402123f15d46c6e7bf03df01e97e1b48/01-arngren-net_crop.jpg',
+				'https://www.siteprice.org/SiteThumbs/a/arngren.net.jpeg',
+				'https://pbs.twimg.com/media/EINUFEnWsAACEck.jpg',
+				'https://liannebunce.files.wordpress.com/2013/11/badwebsite.jpg?w=1400',
+				'https://www.siteprice.org/SiteThumbs/a/arngren.net.jpeg',
+				'./comp.jpg',
+				'./search.jpg'
+			];
+
+			const link = 'http://www.arngren.net/';
+
+			var i = 0;
+
+			function updateImages() {
+				document.getElementById('left').src = images[ ( i - 1 + images.length ) % images.length ];
+				document.getElementById('center').src = images[ i ];
+				document.getElementById('right').src = images[ ( i + 1 ) % images.length ];
+			}
+
+			function nextImage() {
+				i = ( i + 1 ) % images.length ;
+				updateImages();
+			}
+
+			function previousImage() {
+				i = ( i - 1 + images.length ) % images.length;
+				updateImages();
+			}
+
+			function goToLink() {
+				window.location = link;
+			}
+
+			window.onload = function() {
+				updateImages();
+				document.getElementById('q1Image').src = images[ 1 ];
+				document.getElementById('q2Image').src = images[ 8 ];
+				document.getElementById('q3Image').src = images[ 1 ];
+				document.getElementById('q4Image').src = images[ 1 ];
+				document.getElementById('q5Image').src = images[ 7 ];
+				document.getElementById('q6Image').src = images[ 1 ];
+				document.getElementById('left').onclick = function() { goToLink(); };
+				document.getElementById('center').onclick = function() { goToLink(); };
+				document.getElementById('right').onclick = function() { goToLink(); };
+			}
+
+		</script>
+	</head>
+	<body >
+		<section id="gallery" class="centered">
+				<div>
+					<h1>Survey about <a href="#" onclick="goToLink()" class="title">arngren</a></h1>
+				</div>
+
+				<div class="column">
+					<button 
+						id = "previous" 
+						type="button" 
+						class="elevated transparent" 
+						onclick="previousImage()">
+							<img 
+								alt="Previous" 
+								class="small"
+								src="https://uxwing.com/wp-content/themes/uxwing/download/02-arrow/angle-circle-arrow-left.png"/>
+					</button>
+					
+					<img id="left" class="medium"/>
+					
+					<img id="center" class="large"/>
+					
+					<img id="right" class="medium"/>
+					
+					<button 
+						id = "next" 
+						type = "button" 
+						class = "elevated transparent" 
+						onclick = "nextImage()">
+							<img
+								alt="Next"
+								class="small" 
+								src="https://uxwing.com/wp-content/themes/uxwing/download/02-arrow/angle-circle-arrow-right.png">
+					</button>
+				</div>
+					
+		</section>
+		<form action="" method="POST" name="Survey">
+			<section>	
+
+				<div class="border corner question-block padded-heavy">
+					
+					<div class="column">					
+						<a href="#" onclick="goToLink();" class="image">
+							<img 
+								id = "q1Image"
+								class = "huge" 
+								alt = "arngren"
+								title = "if you click here you will be redirected to the arngren home page">
+						</a>
+					</div>
+					
+					<div class="column">
+						<label>
+							le UI design du site est non utilisable car  
+						</label>
+						<input type="text" name="1"/>
+						<br/>
+						
+						<div class="column commentSection">
+							<img 
+								title="please click here to add a comment on this question" 
+								class="tiny"
+								src="https://image.flaticon.com/icons/png/512/25/25663.png" />
+							If you have a comment please input it here<br/>
+							<textarea name="global comment" class="comment"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="border corner question-block padded-heavy">
+
+					<div class="column">
+						<a href="#" onclick="goToLink()" class="image">
+							<img 
+								id = "q2Image"
+								class="huge"
+								title="if you click here you will be redirected to the arngren home page">
+						</a>
+					</div>
+
+					<div class="column">
+						
+						la recherche dans ce site est <br/>
+						
+						<input type="checkbox" name="2" value="1" /><label> fiable: le cite donne tout article qui contient les mots dans la zone de recherche</label><br/>
+						<input type="checkbox" name="2" value="2" /><label> efficase: le site n'ordonne pas les elements par evaluation/prix ...</label><br/>
+						<input type="checkbox" name="2" value="3" /><label> utilisable: l'emplacement de la zone de recherche est intuitive mais difficile a voir a cause des articles</label><br/>
+						<input type="checkbox" name="2" value="4" /><label> fonctionalite correcte: le site effecture une recherche</label><br/>
+						
+						<div class="column commentSection">
+							<img src="https://image.flaticon.com/icons/png/512/25/25663.png" title="please click here to add a comment on this question" class="tiny" />
+							If you have a comment please input it here<br/>
+							<textarea name="global comment" class="comment"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="border corner question-block padded-heavy">
+					<div class="column">
+						
+						<a href="#" onclick="goToLink()" class="image">
+							<img 
+								id = "q3Image" 
+								class="huge" 
+								alt="arngren" 
+								title="if you click here you will be redirected to the arngren home page">
+						</a>
+						
+					</div>
+
+					<div class="column">
+						
+						Placer tout les articles dans la page principale rend the site efficase:
+						
+						<br/>
+						<input type="radio" name="3" value="1">Vrai<br/>
+						<input type="radio" name="3" value="0">Faux<br/>
+						
+						<div class="column commentSection">
+							<img 
+								class="tiny"
+								src="https://image.flaticon.com/icons/png/512/25/25663.png" 
+								title="please click here to add a comment on this question"/>
+							If you have a comment please input it here<br/>
+							<textarea name="Q3 comment" class="comment"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="border corner question-block padded-heavy">
+					<div class="column">
+						<a href="#" onclick="goToLink()" class="image">
+							<img 
+								id = "q4Image" 
+								class="huge" 
+								alt="arngren" 
+								title="if you click here you will be redirected to the arngren home page">
+						</a>
+					</div>
+					
+					<div class="column">
+						Le site n'utilise pas une grille specifique, on place des photos partout, comment évaluez-vous la coherence du UI
+						<table>
+							<tr>
+								<th>totally insatisfied</th>
+								<th>not satisfied</th>
+								<th>neutral</th>
+								<th>satisfied</th>
+								<th>totally satisfied</th>
+							</tr>
+							<tr>
+								<td><input type="radio" name="4" value="1"></td>
+								<td><input type="radio" name="4" value="2"></td>
+								<td><input type="radio" name="4" value="3"></td>
+								<td><input type="radio" name="4" value="4"></td>
+								<td><input type="radio" name="4" value="5"></td>
+
+							</tr>
+						</table>
+						
+						<br/>
+						
+						<div class="column">
+							<img 
+								class="tiny"
+								title="please click here to add a comment on this question"
+								src="https://image.flaticon.com/icons/png/512/25/25663.png"/>
+							If you have a comment please input it here<br/>
+							<textarea name="Q4 comment" class="comment"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="border corner question-block padded-heavy">
+					<div class="column">
+						<a href="#" onclick="goToLink()" class="image">
+							<img 
+								id = "q5Image" 
+								class="huge" 
+								alt="arngren"
+								title="if you click here you will be redirected to the arngren home page">
+						</a>
+					</div>
+
+					<div class="column">
+						placer les articles sans les categoriser rend la recherche 
+						<select name="5">
+							<option value="1">efficace</option>
+							<option value="2">non efficace</option>
+						</select>
+						<br/>
+						
+						<div class="column commentSection">
+							<img 
+								class="tiny" 
+								title="please click here to add a comment on this question" 
+								src="https://image.flaticon.com/icons/png/512/25/25663.png"/>
+							If you have a comment please input it here<br/>
+							<textarea name="Q5 comment" class="comment"></textarea>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="border corner question-block padded-heavy">
+					<div class="column">
+						<a href="#" onclick="goToLink()" class="image">
+							<img 
+							id = "q6Image" 
+							class="huge" 
+							alt="arngren" 
+							title="if you click here you will be redirected to the arngren home page">
+						</a>
+					</div>
+					
+					<div class="column">
+						<label>chaque article utilise une langue ce qui rend le cite </label>
+						<input type="text" name="6"/>
+						<br/>
+						
+						<div class="column commentSection">
+							<img 
+								class="tiny"
+								src="https://image.flaticon.com/icons/png/512/25/25663.png" 
+								title="please click here to add a comment on this question"/>
+							If you have a comment please input it here<br/>
+							<textarea name="G6 comment" class="comment"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="centered lower">
+					<input type="Submit" class="border corner transparent">
+				</div>			
+			</section>
+			<footer>
+				<div>
+					<p class="indented">
+						this is the global comment section: <br/>
+						<textarea name="global comment" class="comment"></textarea>
+					</p>
+					<p class="footer-text">
+						Site Web conçu par Chedli Redissi 300074863.
+					</p>
+				</div>
+			</footer>	
+		</form>
+	</body>
+</html>

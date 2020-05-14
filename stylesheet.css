@@ -1,0 +1,140 @@
+/*#A7BEE2 purple*/
+/*#B1E1F0 blue*/
+
+.footer-text {
+	font-family: "Times New Roman", Times, serif;
+}
+
+.corner {
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+
+.border {
+	border: 2px solid #B1E1F0;
+}
+
+.padded-heavy {
+	padding: 10px 30px;
+}
+
+.question-block {
+	margin: 5px;
+	overflow: auto;
+	align-items: center;
+}
+
+img.small {
+	height: 50px;
+	width: 50px; 
+}
+
+img.large {
+	height: 150px;
+	width: 150px; 
+	margin: 3px 20px;
+}
+
+img.medium {
+	height: 100px;
+	width: 100px; 
+	margin: 3px 15px;
+}
+
+img.tiny {
+	height: 15px;
+	width: 15px; 
+}
+
+img.huge {
+	height: 300px;
+	width: 400px;
+	/*height: auto;
+	width: auto;
+	max-width: 650px;*/	
+	/*height: 100px;
+	width: 100px;*/
+}
+
+a.image {
+	float: left;
+	margin-right: 30px;
+}
+
+a.title {
+	color: #A7BEE2;
+}
+
+a {
+	text-decoration: none;
+}
+
+.column {
+	display: inline-block;
+}
+
+.seperated {
+	margin: 5px 10px;
+}
+
+.centered {
+	text-align: center;
+}
+
+button.elevated {
+	margin-bottom: 50px;
+}
+
+button.transparent {
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+
+div.lower {
+	margin-top: 30px;
+}
+
+body {
+	background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/84/99/D3e06I.png);
+	/*background-image: url('./bkgd.png');*/
+	background-repeat: repeat-y;
+	background-size: auto;
+}
+
+h1 {
+	text-align: center;
+	color: #A7BEE2 !important;
+}
+
+table {
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+tr {
+	border: 2px solid #B1E1F0 
+	border-radius: 5px;
+}
+
+th, td {
+	border: 2px solid #B1E1F0;
+	border-radius: 5px;
+	color: #A7BEE2;
+}
+
+.comment {
+	min-height: 50px;
+	width: 50%;
+	text-align: left;
+	margin-top: 5px;
+}
+
+.indented {
+	margin-left: 20px;
+}
+
+div.commentSection {
+	margin-top: 10px;
+}
